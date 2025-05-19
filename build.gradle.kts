@@ -77,6 +77,11 @@ dependencies {
     /** database */
     runtimeOnly("com.mysql:mysql-connector-j")
 
+    /** swagger */
+    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:${DependencyVersion.SPRINGDOC}")
+    runtimeOnly("com.github.therapi:therapi-runtime-javadoc-scribe:${DependencyVersion.JAVADOC_SCRIBE}")
+    kapt("com.github.therapi:therapi-runtime-javadoc-scribe:${DependencyVersion.JAVADOC_SCRIBE}")
+
     /** etc */
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     val isMacOS = System.getProperty("os.name").startsWith("Mac OS X")
